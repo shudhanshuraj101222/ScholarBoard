@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Add, edit, and manage student marks in your class.">
+  <title>Students | Student Marks Sorting System</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="students">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Student Marks home"><span class="brand-mark">S</span><span>Scholar<span class="brand-light">Board</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Dashboard</a><a class="active" href="students.html">Students</a><a href="sorting.html">Sorting Lab</a><a href="results.html">Results</a></nav>
+    <a class="header-action" href="sorting.html">Open sorting lab <span aria-hidden="true">→</span></a>
+  </header>
+  <main class="shell page-content">
+    <div class="page-heading"><div><p class="eyebrow">CLASS MANAGEMENT</p><h1>Students &amp; marks</h1><p class="page-lede">Keep your class roster up to date. Marks are stored locally in this browser.</p></div><span class="page-stamp">ACADEMIC YEAR <strong>2025—26</strong></span></div>
+    <section class="panel form-panel">
+      <div class="section-title-row"><div><p class="eyebrow">STUDENT RECORD</p><h2 id="form-heading">Add a student</h2></div><button class="button button-quiet" id="load-sample" type="button">Load sample class</button></div>
+      <form id="student-form" novalidate>
+        <div class="form-grid">
+          <div class="field"><label for="student-name">Student name</label><input id="student-name" name="name" type="text" maxlength="60" placeholder="e.g. Aisha Patel" autocomplete="name" required></div>
+          <div class="field"><label for="roll-number">UID</label><input id="roll-number" name="roll" type="text" maxlength="20" placeholder="e.g. MCA-001" required></div>
+          <div class="field"><label for="student-marks">Marks <span class="label-hint">(0–100)</span></label><input id="student-marks" name="marks" type="number" min="0" max="100" step="1" placeholder="e.g. 86" required></div>
+        </div>
+        <div class="form-actions"><p id="form-message" class="form-message" role="status" aria-live="polite"></p><div><button class="button button-quiet hidden" id="cancel-edit" type="button">Cancel edit</button><button class="button" id="submit-student" type="submit">Add student</button><button class="button button-quiet" id="reset-form" type="reset">Reset</button></div></div>
+      </form>
+    </section>
+    <section class="panel roster-panel">
+      <div class="section-title-row"><div><p class="eyebrow">YOUR CLASS</p><h2>Student roster</h2></div><span class="count-badge" id="student-count">0 students</span></div>
+      <div class="table-wrap"><table><thead><tr><th>UID</th><th>Student name</th><th>Marks</th><th>Performance</th><th class="actions-heading">Actions</th></tr></thead><tbody id="student-table-body"></tbody></table></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>ScholarBoard <span class="footer-divider">·</span> Student Marks Sorting System</span><span>Your data stays on this device.</span></footer>
+  <script src="js/data.js"></script><script src="js/students.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore descending Bubble Sort comparisons and student rankings.">
+  <title>Sorting Lab | Student Marks Sorting System</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="sorting">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Student Marks home"><span class="brand-mark">S</span><span>Scholar<span class="brand-light">Board</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Dashboard</a><a href="students.html">Students</a><a class="active" href="sorting.html">Sorting Lab</a><a href="results.html">Results</a></nav>
+    <a class="header-action" href="results.html">View results <span aria-hidden="true">→</span></a>
+  </header>
+  <main class="shell page-content">
+    <div class="page-heading"><div><p class="eyebrow">ALGORITHM PLAYGROUND</p><h1>Sorting lab</h1><p class="page-lede">Watch Bubble Sort compare neighboring marks and build a stable ranking.</p></div><a class="button button-quiet" href="students.html">Manage students</a></div>
+    <section class="algorithm-banner"><div class="algorithm-mark">↕</div><div><p class="eyebrow eyebrow-light">BUBBLE SORT · DESCENDING</p><h2>Highest marks rise to the top</h2><p>Adjacent students are compared. A swap happens only when the left mark is lower, so ties retain their original order.</p></div><div class="complexity-pill"><span>TIME</span><strong>O(n²)</strong></div></section>
+    <section class="panel sorting-panel">
+      <div class="section-title-row"><div><p class="eyebrow">LIVE RANKING</p><h2>Class comparison</h2></div><span id="sort-count" class="count-badge">0 students</span></div>
+      <div id="sort-status" class="sort-status" role="status" aria-live="polite">Ready to sort your class.</div>
+      <div class="table-wrap"><table><thead><tr><th id="rank-heading">Position</th><th>UID</th><th>Student name</th><th>Marks</th></tr></thead><tbody id="sorting-table-body"></tbody></table></div>
+      <div class="sort-actions"><div><button class="button" id="sort-now" type="button">Sort by marks</button><button class="button button-quiet" id="reset-sort" type="button">Reset sorting</button></div><button class="button button-outline" id="show-steps" type="button">Show sorting steps</button></div>
+    </section>
+    <section class="panel steps-panel hidden" id="steps-panel">
+      <div class="section-title-row"><div><p class="eyebrow">UNDER THE HOOD</p><h2>Step-by-step comparisons</h2></div><button class="button button-small" id="next-step" type="button">Start next step →</button></div>
+      <p class="step-explanation" id="step-explanation">Start the walkthrough to inspect each adjacent comparison.</p>
+      <div class="step-progress"><span id="step-progress-label">0 comparisons</span><div class="progress-track"><span id="step-progress-bar"></span></div></div>
+      <div class="step-log" id="step-log" aria-live="polite"></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>ScholarBoard <span class="footer-divider">·</span> Student Marks Sorting System</span><span>Bubble Sort · Stable descending order</span></footer>
+  <script src="js/data.js"></script><script src="js/sorting.js"></script>
+</body>
+</html>

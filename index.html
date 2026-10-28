@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A modern student marks dashboard with a visual Bubble Sort ranking system.">
+  <title>Dashboard | Student Marks Sorting System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Student Marks home"><span class="brand-mark">S</span><span>Scholar<span class="brand-light">Board</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="index.html">Dashboard</a><a href="students.html">Students</a><a href="sorting.html">Sorting Lab</a><a href="results.html">Results</a>
+    </nav>
+    <a class="header-action" href="students.html">Manage students <span aria-hidden="true">→</span></a>
+  </header>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow eyebrow-light">ACADEMIC PERFORMANCE · DAA PROJECT</p>
+        <h1>Student Marks<br>Sorting System</h1>
+        <p class="hero-subtitle">Smart Student Ranking Using Bubble Sort</p>
+        <p class="hero-description">A clear, interactive way to manage class marks, understand sorting, and celebrate achievement.</p>
+        <a class="button button-white" href="sorting.html">Start sorting <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div><div class="art-orbit orbit-two"></div>
+        <div class="art-card"><span class="art-kicker">CLASS LEADER</span><span class="art-medal">✦</span><strong id="hero-leader">—</strong><span id="hero-leader-marks">Add your class to begin</span><div class="art-score"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+        <span class="floating-note">Ranked with care</span>
+      </div>
+    </section>
+
+    <div class="section-title-row"><div><p class="eyebrow">YOUR CLASS AT A GLANCE</p><h2>Performance overview</h2></div><a class="inline-link" href="results.html">Full report <span aria-hidden="true">↗</span></a></div>
+    <section class="stat-grid" aria-label="Class statistics">
+      <article class="stat-card"><span class="stat-icon">♙</span><span class="stat-label">Total students</span><strong id="stat-total">0</strong><span class="stat-caption">In your class</span></article>
+      <article class="stat-card"><span class="stat-icon">✦</span><span class="stat-label">Highest marks</span><strong id="stat-highest">—</strong><span class="stat-caption">Top performance</span></article>
+      <article class="stat-card"><span class="stat-icon">◒</span><span class="stat-label">Class average</span><strong id="stat-average">—</strong><span class="stat-caption">Overall score</span></article>
+      <article class="stat-card"><span class="stat-icon">⌄</span><span class="stat-label">Lowest marks</span><strong id="stat-lowest">—</strong><span class="stat-caption">Room to grow</span></article>
+    </section>
+
+    <section class="dashboard-grid">
+      <article class="panel intro-panel">
+        <div class="panel-icon">↕</div><p class="eyebrow">THE IDEA</p><h2>Learning through every comparison</h2>
+        <p>Bubble Sort repeatedly compares neighboring students and swaps them when their marks are out of order. Explore each comparison in the Sorting Lab and see how a leaderboard takes shape.</p>
+        <a class="inline-link" href="sorting.html">Explore the algorithm <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="panel preview-panel">
+        <div class="section-title-row compact"><div><p class="eyebrow">CLASS LEADERBOARD</p><h2>Top performers</h2></div><a class="inline-link" href="results.html">View all</a></div>
+        <div id="dashboard-preview" class="preview-list"></div>
+      </article>
+    </section>
+  </main>
+  <footer class="site-footer"><span>ScholarBoard <span class="footer-divider">·</span> Student Marks Sorting System</span><span>Built to make algorithms easy to understand.</span></footer>
+  <script src="js/data.js"></script><script src="js/dashboard.js"></script>
+</body>
+</html>

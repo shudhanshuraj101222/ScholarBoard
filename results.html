@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Class leaderboard, performance statistics, and marks distribution.">
+  <title>Results | Student Marks Sorting System</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="results">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Student Marks home"><span class="brand-mark">S</span><span>Scholar<span class="brand-light">Board</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a href="index.html">Dashboard</a><a href="students.html">Students</a><a href="sorting.html">Sorting Lab</a><a class="active" href="results.html">Results</a></nav>
+    <a class="header-action" href="index.html">Dashboard <span aria-hidden="true">→</span></a>
+  </header>
+  <main class="shell page-content">
+    <div class="page-heading"><div><p class="eyebrow">CLASS PERFORMANCE REPORT</p><h1>Results &amp; statistics</h1><p class="page-lede">A complete view of achievement across your class.</p></div><div class="report-actions"><button class="button button-quiet" id="export-csv" type="button">↓ Export CSV</button><button class="button" id="print-results" type="button">Print results</button></div></div>
+    <section class="podium-grid" id="podium-grid" aria-label="Top three students"></section>
+    <section class="stat-grid report-stats">
+      <article class="stat-card"><span class="stat-icon">♙</span><span class="stat-label">Total students</span><strong id="result-total">0</strong><span class="stat-caption">In this report</span></article>
+      <article class="stat-card"><span class="stat-icon">✦</span><span class="stat-label">Highest marks</span><strong id="result-highest">—</strong><span class="stat-caption">Top score</span></article>
+      <article class="stat-card"><span class="stat-icon">◒</span><span class="stat-label">Class average</span><strong id="result-average">—</strong><span class="stat-caption">Mean marks</span></article>
+      <article class="stat-card"><span class="stat-icon">⌄</span><span class="stat-label">Lowest marks</span><strong id="result-lowest">—</strong><span class="stat-caption">Lowest score</span></article>
+    </section>
+    <div class="report-grid">
+      <section class="panel distribution-panel"><div class="section-title-row"><div><p class="eyebrow">SCORE PROFILE</p><h2>Marks distribution</h2></div><span class="section-note">Students by score range</span></div><div id="distribution-chart" class="distribution-chart"></div></section>
+      <section class="panel leaderboard-panel"><div class="section-title-row"><div><p class="eyebrow">FINAL RANKING</p><h2>Class leaderboard</h2></div><a class="inline-link" href="sorting.html">Open lab ↗</a></div><div class="table-wrap"><table><thead><tr><th>Rank</th><th>UID</th><th>Student name</th><th>Marks</th></tr></thead><tbody id="results-table-body"></tbody></table></div></section>
+    </div>
+    <div class="report-back"><a class="button button-quiet" href="index.html">← Back to dashboard</a></div>
+  </main>
+  <footer class="site-footer"><span>ScholarBoard <span class="footer-divider">·</span> Student Marks Sorting System</span><span>Report generated from your current class records.</span></footer>
+  <script src="js/data.js"></script><script src="js/dashboard.js"></script>
+</body>
+</html>
